@@ -82,6 +82,10 @@ Matrix operator*(const Fraction multiplier, const Matrix &matrix) {
     return (matrix * multiplier);
 }
 
+Matrix Matrix::operator=(const Matrix &other) {
+    return Matrix(row, col);
+}
+
 Matrix Matrix::inverse() const {
     Fraction det = determinant();
     if (det == Integer(0)) {

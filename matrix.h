@@ -19,6 +19,8 @@ class Matrix {
     Matrix operator*(const Fraction multiplier) const;
     friend Matrix operator*(const Fraction multiplier, const Matrix &matrix);
 
+    Matrix operator=(const Matrix &other);
+
     Matrix inverse() const;
     Matrix transpose() const;
     Matrix adjoint() const;
